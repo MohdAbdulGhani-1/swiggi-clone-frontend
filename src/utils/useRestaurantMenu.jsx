@@ -9,10 +9,10 @@ const useRestaurantMenu = (resId) => {
  
   const fetchData = async () => {
     try {
-      const data = await fetch(`${import.meta.env.VITE_RestaurentMenuUrl}${resId}`);
+      const data = await fetch(`${import.meta.env.VITE_useRestaurentMenuUrl}${resId}`);
       // fetch(`${import.meta.env.VITE_useRestaurentMenuUrl}${resId}`);
       const json = await data.json();
-      console.log("Fetched Menu Data: ", json); 
+      // console.log("Fetched Menu Data: ", json); 
       setMenu(json);
       const corsError = json?.corsfix_error ;
       console.log(corsError);
